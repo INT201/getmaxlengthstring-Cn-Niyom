@@ -12,7 +12,6 @@ function getMaxLengthString(arrayOfString) {
         maxLengthString.push(index)
       }
       else {
-        max = index.length;
         maxLengthString = [index];
       }
 
