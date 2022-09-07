@@ -5,15 +5,22 @@ function getMaxLengthString(arrayOfString) {
   {
     return undefined
   }
-  let maxLengthString;
+  let maxLengthString ;
   let max=-1;
-  for( index in arrayOfString)
+  for( index of arrayOfString)
   {
-    // console.log(arrayOfString[index]);
-    if(arrayOfString[index].length >max)
+   
+    if(index.length >=max)
     {
-      max=arrayOfString[index].length;
-      maxLengthString=arrayOfString[index];
+      if(index.length ===max)
+      {
+        maxLengthString.push(index)
+      }
+      else{
+        max=index.length;
+        maxLengthString=[index];
+      }
+      
     }
   }
   return maxLengthString
