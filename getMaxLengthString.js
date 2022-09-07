@@ -4,12 +4,11 @@ function getMaxLengthString(arrayOfString) {
   if (arrayOfString === undefined || arrayOfString === null) {
     return undefined
   }
-  let maxLengthString;
-  let max = -1;
+  let maxLengthString=arrayOfString[0];
   for (index of arrayOfString) {
 
-    if (index.length >= max) {
-      if (index.length === max) {
+    if (index.length >= maxLengthString[0].length) {
+      if (index.length === maxLengthString[0].length) {
         maxLengthString.push(index)
       }
       else {
